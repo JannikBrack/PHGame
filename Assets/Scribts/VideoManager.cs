@@ -7,13 +7,14 @@ using UnityEngine.Video;
 public class VideoManager : MonoBehaviour
 {
     [SerializeField] VideoPlayer Vplayer;
+    [SerializeField] GameObject background;
     [SerializeField] GameObject parent;
     public float countdown;
     bool countdownstart;
     // Start is called before the first frame update
     void Start()
     {
-        countdown = 2.8f;
+        countdown = 21f;
         parent.SetActive(true);
         Vplayer.Pause();
     }
@@ -21,7 +22,13 @@ public class VideoManager : MonoBehaviour
     {
         if (countdownstart)
         {
-            if (countdown > 0) countdown -= Time.deltaTime;
+            if (countdown > 0f)
+            {
+                if (countdown < 17.25f)
+                    parent.SetActive(false);
+                countdown -= Time.deltaTime;
+
+            }
             else
             {
                 countdownstart = false;
@@ -32,7 +39,7 @@ public class VideoManager : MonoBehaviour
 
     public void StartGame()
     {
-        parent.SetActive(false);
+        background.SetActive(false);
         Vplayer.Play();
         countdownstart = true;
     }

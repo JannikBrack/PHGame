@@ -646,7 +646,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1892169092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1892169094}
+        m_TargetAssemblyTypeName: AbobuttonSim, Assembly-CSharp
+        m_MethodName: Pressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1892169092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c226562a93f6f0478488107108922f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1713198919}
 --- !u!1 &2048265831
 GameObject:
   m_ObjectHideFlags: 0
